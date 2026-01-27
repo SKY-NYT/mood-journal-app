@@ -1,19 +1,16 @@
 {
-  "name": "mood-journal",
+  "name": "mood-journal-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "TypeScript Mood Journal",
+  "main": "dist/journal.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc",
-    "dev": "tsc --watch"
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "npx serve ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.2"
   }
 }
