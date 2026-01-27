@@ -5,7 +5,7 @@
   "main": "dist/journal.js",
   "type": "module",
   "scripts": {
-    "build": "tsc && cp index.html dist/ && cp style.css dist/",
+    "build": "tsc && cp index.html dist/ && cp styles.css dist/",
     "dev": "tsc --watch",
     "start": "npx serve ."
   },
