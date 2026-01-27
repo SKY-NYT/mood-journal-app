@@ -1,0 +1,84 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal Mood Journal</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Personal Mood Journal</h1>
+    <p class="subtitle">Capture your thoughts and track your mood over time.</p>
+  </header>
+
+  <main class="container">
+    <!-- Entry Form -->
+    <section class="card">
+      <h2 id="form-title">New Entry</h2>
+      <form id="entry-form" novalidate>
+        <input type="hidden" id="editingId" />
+        <div class="field">
+          <label for="title">Title <span aria-hidden="true">*</span></label>
+          <input id="title" name="title" type="text" required placeholder="e.g., Morning reflections" />
+        </div>
+        <div class="field">
+          <label for="content">Content <span aria-hidden="true">*</span></label>
+          <textarea id="content" name="content" rows="4" required placeholder="Write your thoughts..."></textarea>
+        </div>
+        <div class="field">
+          <label for="mood">Mood <span aria-hidden="true">*</span></label>
+          <select id="mood" name="mood" required></select>
+        </div>
+        <div class="actions">
+          <button id="submitBtn" type="submit">Add Entry</button>
+          <button id="cancelEditBtn" type="button" class="secondary" hidden>Cancel Edit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Filter, Sort & Tools</h2>
+      <div class="filters">
+        <div class="field">
+          <label for="filterMood">Filter by mood</label>
+          <select id="filterMood"></select>
+        </div>
+        <div class="field">
+          <label for="search">Search text</label>
+          <input id="search" type="search" placeholder="Search in title or content..." />
+        </div>
+        <div class="field">
+          <label for="sortOrder">Sort</label>
+          <select id="sortOrder">
+            <option value="NEWEST">Newest first</option>
+            <option value="OLDEST">Oldest first</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Export / Import</label>
+          <div class="actions">
+            <button id="exportBtn" type="button" class="ghost">Export JSON</button>
+            <label class="ghost">
+              Import JSON
+              <input id="importFile" type="file" accept="application/json,.json" hidden />
+            </label>
+          </div>
+        </div>
+      </div>
+      <p id="counter" class="counter"></p>
+    </section>
+
+    <!-- Entries -->
+    <section class="card">
+      <h2>Entries</h2>
+      <ul id="entries" class="entries"></ul>
+      <p id="emptyState" class="empty" hidden>No entries yet. Add your first one above!</p>
+    </section>
+  </main>
+  
+<div id="toast-container"></div>
+  <script type="module" src="./dist/journal.js"></script>
+</body>
+</html>
