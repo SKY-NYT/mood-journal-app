@@ -13,5 +13,5 @@
     "noFallthroughCasesInSwitch": true,
     "lib":["ES2021" , "DOM"]
   },
-  "include": ["javascript"]
+  "include": ["javascript/**/*"]
 }
