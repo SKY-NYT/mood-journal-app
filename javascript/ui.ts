@@ -1,5 +1,5 @@
 
-import type { JournalEntry } from "./journal.js";
+import type { JournalEntry } from "./types.js";
 import { Mood } from "./types.js";
 
 type Elements = {

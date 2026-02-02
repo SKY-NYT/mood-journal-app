@@ -13,3 +13,4 @@ export interface JournalEntry {
   mood: Mood;
   timestamp: number;
 }
+export type Journal = JournalEntry[];

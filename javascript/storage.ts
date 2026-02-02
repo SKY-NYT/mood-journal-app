@@ -1,4 +1,4 @@
-import type { Journal, JournalEntry} from "./journal.js";
+import type { Journal, JournalEntry} from "./types.js";
 
 const STORAGE_KEY = "mood-journal";
 

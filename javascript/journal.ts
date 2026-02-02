@@ -13,17 +13,9 @@ import {
   saveJournal,
   addEntry as storageAddEntry,
 } from "./storage.js";
-import { Mood } from "./types.js";
+import { Mood, JournalEntry, Journal } from "./types.js";
 
-export interface JournalEntry {
-  id: string;
-  title: string;
-  content: string;
-  mood: Mood;
-  timestamp: number;
-}
 
-export type Journal = JournalEntry[];
 
 export function findByProperty<T>(
   list: T[],
