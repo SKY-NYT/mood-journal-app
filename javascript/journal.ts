@@ -198,7 +198,7 @@ function render(): void {
   updateCounter(filtered.length, journal.length);
   showEmptyState(filtered.length === 0 && journal.length === 0);
 }
-d
+
 function isMood(value: string): value is Mood {
   return (Object.values(Mood) as string[]).includes(value);
 }
